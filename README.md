@@ -35,3 +35,11 @@ Includes all the static files (cs,js and libraries)
 ### Public/vendor
 
 Includes all the libraries
+
+### Public/stylesheets/fonts.css
+
+Includes the google fonts CDN's
+
+### Public/stylesheets/partials
+
+Includes the css variables and global css
