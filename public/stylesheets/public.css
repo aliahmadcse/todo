@@ -1,0 +1,13 @@
+/* Importing fonts */
+@import url('./fonts.css');
+
+/* Importing variables */
+@import url('./partials/variables.css');
+
+/* Importing global css */
+@import url('./partials/global.css');
+
+
+.text-center {
+    font-family: var(--roboto);
+}
