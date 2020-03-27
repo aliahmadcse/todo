@@ -41,7 +41,12 @@
     <!-- ---------task card end------------ -->
 
     <div class="row">
-        <div class="col-12"></div>
+        <div class="col-12">
+            <div class="task-input">
+                <input type="text" class="" placeholder="Add task">
+            </div>
+
+        </div>
     </div>
 </div>
 

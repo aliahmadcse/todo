@@ -117,6 +117,7 @@ body {
     .top-wrapper {
         margin-top: 3rem;
     }
+
 }
 
 /* ---------- search form end ------------- */
@@ -189,3 +190,70 @@ body {
 }
 
 /* ------------task card end -------------*/
+
+/* ------------task input-------------- */
+
+.task-input {
+    position: fixed;
+    left: 390px;
+    bottom: 3vh;
+    text-align: center;
+}
+
+
+.task-input>input[type="text"] {
+    padding: 8px;
+    width: 800px;
+    border: 3px solid var(--rebeccapurple);
+    font-family: var(--bellota-text);
+    font-size: 1rem;
+}
+
+@media only screen and (max-width:1250px) {
+    .task-input {
+        left: 300px;
+    }
+}
+
+@media only screen and (max-width:1130px) {
+    .task-input {
+        left: 300px;
+    }
+
+    .task-input>input[type="text"] {
+        width: 690px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .task-input {
+        left: 280px;
+    }
+
+    .task-input>input[type="text"] {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width:906px) {
+    .task-input {
+        left: 300px;
+    }
+
+    .task-input>input[type="text"] {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width:766px) {
+    .task-input {
+        left: 10px;
+    }
+
+    .task-input>input[type="text"] {
+        width: 93vw;
+        border: 2px solid black;
+    }
+}
+
+/* ------------end task input-------------- */
