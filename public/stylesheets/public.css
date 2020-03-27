@@ -8,6 +8,27 @@
 @import url('./partials/global.css');
 
 
-.text-center {
+
+/* -------------- navbar ------------- */
+.navbar-light .navbar-brand {
+    font-family: var(--indie-flower);
+    font-size: 2rem;
+    color: var(--rebeccapurple);
+}
+
+.navbar-light .navbar-brand:hover {
+    color: none;
+}
+
+.navbar-light .collapse .nav-link {
+    color: var(--title-color);
+    font-size: 1.2rem;
+    margin: 0px 15px;
     font-family: var(--roboto);
 }
+
+.navbar-light .collapse .nav-link:hover {
+    color: var(--rebeccapurple);
+}
+
+/* --------------navbar end------------- */

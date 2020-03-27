@@ -2,6 +2,7 @@
 :root {
     --primary-color: #4458dc;
     --primary-color2: #854fee;
+    --rebeccapurple: #663399;
     --title-color: #141313;
     --text-color: #777777;
     --border-color: #201f1f17;
@@ -11,4 +12,6 @@
 
     /* font family variables. */
     --roboto: 'Roboto', sans-serif;
+    --indie-flower: 'Indie Flower', sans-serif;
+    --bellota-text: 'Bellota Text', sans-serif;
 }
