@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 ob_start(); // turn on output buffering
 
 // Assign file paths to PHP constants
@@ -41,3 +44,5 @@ spl_autoload_register('my_autoload');
 $database = db_connect();
 
 DatabaseObject::set_database($database);
+
+$session = new Session();

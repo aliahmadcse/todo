@@ -69,6 +69,19 @@
             </nav>
 
             <div class="container-fluid">
+                <?php if ($session->isset_message()) : ?>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 col-sm-9 col-xs-11 mx-auto">
+                            <div class="alert alert-success alert-dismissible fade show mt-5 w-40 text-center" role="alert">
+                                <?php echo $session->get_message(); ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php $session->unset_message(); ?>
             </div>
         </div>
     </div>
