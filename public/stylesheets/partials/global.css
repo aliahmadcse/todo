@@ -22,3 +22,7 @@ input {
 input:focus {
     border: 3px solid var(--primary-color2) !important;
 }
+
+small{
+    font-size:16px;
+}

@@ -10,18 +10,18 @@
             <i class="fas fa-user-circle user-icon"></i>
             <form action="<?php echo url_for('/signup.php'); ?>" method="POST">
                 <div class="form-group">
-                    <small class="text-danger form-text mb-2"></small>
-                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your Email">
+                    <small class="text-danger form-text mb-2" id="email-error"></small>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Your Email">
                 </div>
                 <div class="form-group">
-                    <small class="text-danger form-text mb-2"></small>
-                    <input type="text" class="form-control" placeholder="Username">
+                    <small class="text-danger form-text mb-2" id="username-error"></small>
+                    <input type="text" class="form-control" id="username" placeholder="Username">
                 </div>
                 <div class="form-group">
-                    <small class="text-danger form-text mb-2"></small>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <small class="text-danger form-text mb-2" id="password-error"></small>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block btn-submit-form">Sign Up</button>
+                <button type="submit" class="btn btn-primary btn-block btn-submit-form btn-sign-up">Sign Up</button>
             </form>
         </div>
     </div>

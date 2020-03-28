@@ -277,7 +277,11 @@ body {
 }
 
 .btn-submit-form:hover {
-    background: var(--primary-color2);
+    background: var(--primary-color2) ;
+}
+
+.btn-submit-form:focus{
+    background: var(--primary-color2) ;
 }
 
 @media only screen and (max-width:769px) {
