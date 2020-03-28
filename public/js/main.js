@@ -11,31 +11,43 @@ $(document).ready(function() {
   // sign up form validation
   $(".btn-sign-up").click(function() {
     let is_valid = true;
-    $("#email-error").text("");
-    $("#username-error").text("");
-    $("#password-error").text("");
+    let email_error = $("#email-error");
+    let username_error = $("#username-error");
+    let password_error = $("#password-error");
 
     const email = $("#email").val();
     const username = $("#username").val();
     const password = $("#password").val();
 
+    // resetting errors
+    email_error.text("");
+    username_error.text("");
+    password_error.text("");
+
     if (!is_valid_email(email)) {
-      $("#email-error").text("Does not seems like a valid email. Isn't it?");
+      const error_str = "Does not seems like a valid email. Isn't it?";
+      display_error(error_str, email_error);
       is_valid = false;
     }
 
     if (!is_valid_username(username)) {
-      $("#username-error").text("Username atleast be 5 characters long");
+      const error_str = "Username atleast be 5 characters long";
+      display_error(error_str, username_error);
       is_valid = false;
     }
 
     if (!is_valid_password(password)) {
-      $("#password-error").text("Password atleast be 8 characters long");
+      const error_str = "Password atleast be 8 characters long";
+      display_error(error_str, password_error);
       is_valid = false;
     }
 
     return is_valid;
   });
+
+  const display_error = (error, element) => {
+    element.text(error);
+  };
 
   const is_valid_email = email => {
     const regex_pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -58,9 +70,6 @@ $(document).ready(function() {
     }
     return true;
   };
-
-  
-
 
   // end of document ready function
 });
