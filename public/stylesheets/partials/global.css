@@ -13,3 +13,12 @@ a {
 a:hover {
     color: var(--rebeccapurple) !important;
 }
+
+input {
+    font-family: var(--bellota-text);
+    font-size: 18px !important;
+}
+
+input:focus {
+    border: 3px solid var(--primary-color2) !important;
+}

@@ -27,9 +27,11 @@
                 <div class="sidebar-heading"> Todo</div>
             </a>
             <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-sun"></i>&nbsp;My Day</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="far fa-star"></i>&nbsp;Important</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="far fa-list-alt"></i>&nbsp;Completed</a>
+                <a href="<?php echo url_for('/index.php'); ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-sun"></i>&nbsp;My Day</a>
+                <?php if ($is_login) : ?>
+                    <a href="#" class="list-group-item list-group-item-action bg-light"><i class="far fa-star"></i>&nbsp;Important</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light"><i class="far fa-list-alt"></i>&nbsp;Completed</a>
+                <?php endif; ?>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -46,13 +48,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <?php if ($is_login) : ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sign In</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sign Up</a>
-                            </li>
-                        <?php else :  ?>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Username
@@ -60,6 +55,13 @@
                                 <div class="bg-light dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Sign Out</a>
                                 </div>
+                            </li>
+                        <?php else :  ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo url_for('/signin.php'); ?>">Sign In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo url_for('/signup.php'); ?>">Sign Up</a>
                             </li>
                         <?php endif; ?>
                     </ul>
