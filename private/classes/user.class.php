@@ -45,6 +45,11 @@ class User extends DatabaseObject
         $this->hashed_password = password_hash($this->password, PASSWORD_BCRYPT);
     }
 
+    public function verify_password($password)
+    {
+        return password_verify($password, $this->hashed_password);
+    }
+
     private function has_unique_username()
     {
         $result = static::find_by_username($this->username);

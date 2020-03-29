@@ -6,8 +6,17 @@
 
 <?php
 if (is_post_request()) {
-    $args = $_POST['user'];
-    print_r($args);
+    $username = $_POST['user']['username'];
+    $password = $_POST['user']['password'];
+
+    $user = new User([]);
+    $result = $user->find_by_username($username);
+    // result is another user object contains matched database row
+    if ($result && $result->verify_password($password)) {
+        redirect_to(url_for('/index.php'));
+    } else {
+        echo "Error";
+    }
 }
 ?>
 
