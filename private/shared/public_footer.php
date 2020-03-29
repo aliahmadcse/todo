@@ -6,6 +6,8 @@
 
 <!-- custom js -->
 <script src="<?php echo url_for('/js/main.js') ?>"></script>
+<script src="<?php echo url_for('/js/signup_validate.js') ?>"></script>
+<script src="<?php echo url_for('/js/signin_validate.js') ?>"></script>
 
 </body>
 
