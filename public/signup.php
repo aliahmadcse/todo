@@ -27,18 +27,18 @@ if (is_post_request()) {
             <i class="fas fa-user-circle user-icon"></i>
             <form action="<?php echo url_for('/signup.php'); ?>" method="POST">
                 <div class="form-group">
-                    <small class="text-danger form-text mb-2" id="email-error"><?php echo $user->errors['username'] ?? ''; ?></small>
-                    <input type="email" value="<?php echo $user->get_email(); ?>" name="user[email]" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Your Email">
+                    <small class="text-danger form-text mb-2" id="signup-email-error"></small>
+                    <input type="email" value="<?php echo $user->get_email(); ?>" name="user[email]" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Your Email">
                 </div>
                 <div class="form-group">
-                    <small class="text-danger form-text mb-2" id="username-error"></small>
-                    <input type="text" value="<?php echo $user->get_username(); ?>" name="user[username]" class="form-control" id="username" placeholder="Username">
+                    <small class="text-danger form-text mb-2" id="signup-username-error"><?php echo $user->errors['username'] ?? ''; ?></small>
+                    <input type="text" value="<?php echo $user->get_username(); ?>" name="user[username]" class="form-control" id="signup-username" placeholder="Username">
                 </div>
                 <div class="form-group">
-                    <small class="text-danger form-text mb-2" id="password-error"></small>
-                    <input type="password" value="<?php echo $user->get_password(); ?>" name="user[password]" class="form-control" id="password" placeholder="Password">
+                    <small class="text-danger form-text mb-2" id="signup-password-error"></small>
+                    <input type="password" value="<?php echo $user->get_password(); ?>" name="user[password]" class="form-control" id="signup-password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block btn-submit-form btn-sign-up">Sign Up</button>
+                <button type="submit" class="btn btn-primary btn-block btn-submit-form btn-signup">Sign Up</button>
             </form>
         </div>
     </div>

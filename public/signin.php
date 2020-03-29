@@ -1,9 +1,15 @@
 <?php include_once('../private/initialize.php'); ?>
 
-<?php $page_title = "Sign Up"; ?>
+<?php $page_title = "Sign In"; ?>
 
 <?php include_once(SHARED_PATH . '/public_header.php'); ?>
 
+<?php
+if (is_post_request()) {
+    $args = $_POST['user'];
+    print_r($args);
+}
+?>
 
 <div class="page-wrapper">
     <div class="row">
@@ -11,14 +17,14 @@
             <i class="fas fa-user-circle user-icon"></i>
             <form action="<?php echo url_for('/signin.php'); ?>" method="POST">
                 <div class="form-group">
-                    <small class="text-danger form-text mb-2"></small>
-                    <input type="text" class="form-control" placeholder="Username">
+                    <small class="text-danger form-text mb-2" id="signin-username-error"></small>
+                    <input type="text" name="user[username]" class="form-control" placeholder="Username">
                 </div>
                 <div class="form-group">
-                    <small class="text-danger form-text mb-2"></small>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <small class="text-danger form-text mb-2" id="signin-password-error"></small>
+                    <input type="password" name="user[password]" class="form-control" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block btn-submit-form">Sign In</button>
+                <button type="submit" class="btn btn-primary btn-block btn-submit-form btn-signin">Sign In</button>
             </form>
         </div>
     </div>

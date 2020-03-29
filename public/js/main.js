@@ -9,15 +9,15 @@ $(document).ready(function() {
   $(".container-fluid").append(page_wrapper);
 
   // sign up form validation
-  $(".btn-sign-up").click(function() {
+  $(".btn-signup").click(function() {
     let is_valid = true;
-    let email_error = $("#email-error");
-    let username_error = $("#username-error");
-    let password_error = $("#password-error");
+    let email_error = $("#signup-email-error");
+    let username_error = $("#signup-username-error");
+    let password_error = $("#signup-password-error");
 
-    const email = $("#email").val();
-    const username = $("#username").val();
-    const password = $("#password").val();
+    const email = $("#signup-email").val();
+    const username = $("#signup-username").val();
+    const password = $("#signup-password").val();
 
     // resetting errors
     email_error.text("");
@@ -70,6 +70,11 @@ $(document).ready(function() {
     }
     return true;
   };
+
+  // sign in form validations
+  $(".btn-signin").click(() => {
+    return false;
+  });
 
   // end of document ready function
 });
