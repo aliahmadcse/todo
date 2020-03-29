@@ -73,7 +73,29 @@ $(document).ready(function() {
 
   // sign in form validations
   $(".btn-signin").click(() => {
-    return false;
+    let is_valid = true;
+    const username = $("#signin-username").val();
+    const password = $("#signin-password").val();
+
+    let username_error = $("#signin-username-error");
+    let password_error = $("#signin-password-error");
+
+    // resetting errors
+    username_error.text("");
+    password_error.text("");
+
+    if (username.length == 0) {
+      const error_str = "Username can't be empty";
+      display_error(error_str, username_error);
+      is_valid = false;
+    }
+    if (password.length == 0) {
+      const error_str = "Password can't be empty";
+      display_error(error_str, password_error);
+      is_valid = false;
+    }
+
+    return is_valid;
   });
 
   // end of document ready function

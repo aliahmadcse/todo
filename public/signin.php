@@ -18,11 +18,11 @@ if (is_post_request()) {
             <form action="<?php echo url_for('/signin.php'); ?>" method="POST">
                 <div class="form-group">
                     <small class="text-danger form-text mb-2" id="signin-username-error"></small>
-                    <input type="text" name="user[username]" class="form-control" placeholder="Username">
+                    <input type="text" id="signin-username" name="user[username]" class="form-control" placeholder="Username">
                 </div>
                 <div class="form-group">
                     <small class="text-danger form-text mb-2" id="signin-password-error"></small>
-                    <input type="password" name="user[password]" class="form-control" placeholder="Password">
+                    <input type="password" id="signin-password" name="user[password]" class="form-control" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block btn-submit-form btn-signin">Sign In</button>
             </form>
