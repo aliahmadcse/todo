@@ -1,5 +1,11 @@
 <?php include_once('../private/initialize.php'); ?>
 
+<?php
+if ($session->is_signed_in()) {
+    redirect_to(url_for('/index.php'));
+}
+?>
+
 <?php $page_title = "Sign Up"; ?>
 
 <?php include_once(SHARED_PATH . '/public_header.php'); ?>

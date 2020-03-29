@@ -1,5 +1,11 @@
 <?php include_once('../private/initialize.php'); ?>
 
+<?php
+if ($session->is_signed_in()) {
+    redirect_to(url_for('/index.php'));
+}
+?>
+
 <?php $page_title = "Sign In"; ?>
 
 <?php include_once(SHARED_PATH . '/public_header.php'); ?>
@@ -13,9 +19,10 @@ if (is_post_request()) {
     $result = $user->find_by_username($username);
     // result is another user object contains matched database row
     if ($result && $result->verify_password($password)) {
+        $session->set_signin($result->get_id(), $result->get_username());
         redirect_to(url_for('/index.php'));
     } else {
-        echo "Error";
+        $error = "Doesn't seems like correct username or password";
     }
 }
 ?>
@@ -26,8 +33,8 @@ if (is_post_request()) {
             <i class="fas fa-user-circle user-icon"></i>
             <form action="<?php echo url_for('/signin.php'); ?>" method="POST">
                 <div class="form-group">
-                    <small class="text-danger form-text mb-2" id="signin-username-error"></small>
-                    <input type="text" id="signin-username" name="user[username]" class="form-control" placeholder="Username">
+                    <small class="text-danger form-text mb-2" id="signin-username-error"><?php echo $error ?? '' ?></small>
+                    <input type="text" value="<?php echo $username ?? ''; ?>" id="signin-username" name="user[username]" class="form-control" placeholder="Username">
                 </div>
                 <div class="form-group">
                     <small class="text-danger form-text mb-2" id="signin-password-error"></small>

@@ -24,4 +24,26 @@ class Session
     {
         unset($_SESSION['message']);
     }
+
+    public function set_signin($id, $username)
+    {
+        $_SESSION['id'] = $id;
+        $_SESSION['username'] = $username;
+    }
+
+    public function is_signed_in()
+    {
+        return isset($_SESSION['id']) && isset($_SESSION['username']);
+    }
+
+    public function get_username()
+    {
+        return $_SESSION['username'];
+    }
+
+    public function signout()
+    {
+        unset($_SESSION['id']);
+        unset($_SESSION['username']);
+    }
 }

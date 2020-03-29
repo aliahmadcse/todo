@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <?php $is_login = false; ?>
+    <?php $is_signed_in = $session->is_signed_in(); ?>
 
     <div class="d-flex" id="wrapper">
 
@@ -28,7 +28,7 @@
             </a>
             <div class="list-group list-group-flush">
                 <a href="<?php echo url_for('/index.php'); ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-sun"></i>&nbsp;My Day</a>
-                <?php if ($is_login) : ?>
+                <?php if ($is_signed_in) : ?>
                     <a href="#" class="list-group-item list-group-item-action bg-light"><i class="far fa-star"></i>&nbsp;Important</a>
                     <a href="#" class="list-group-item list-group-item-action bg-light"><i class="far fa-list-alt"></i>&nbsp;Completed</a>
                 <?php endif; ?>
@@ -47,13 +47,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <?php if ($is_login) : ?>
+                        <?php if ($is_signed_in) : ?>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Username
+                                    <?php echo $session->get_username(); ?>
                                 </a>
                                 <div class="bg-light dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Sign Out</a>
+                                    <a class="dropdown-item" href="<?php echo url_for('/signout.php'); ?>">Sign Out</a>
                                 </div>
                             </li>
                         <?php else :  ?>
