@@ -26,14 +26,18 @@
             <div class="card mb-2">
                 <div class="task-description">
                     <label class="container ml-5">Write some code
-                        <input type="checkbox">
-                        <span class="checkmark m-1"></span>
+                        <?php if ($session->is_signed_in()) : ?>
+                            <input type="checkbox">
+                            <span class="checkmark m-1"></span>
+                        <?php endif; ?>
                     </label>
                 </div>
-                <div class="card-icon">
-                    <i class="mr-4 far fa-star"></i>
-                    <!-- <i class="mr-4 fas fa-star"></i> -->
-                </div>
+                <?php if ($session->is_signed_in()) : ?>
+                    <div class="card-icon">
+                        <i class="mr-4 far fa-star"></i>
+                        <!-- <i class="mr-4 fas fa-star"></i> -->
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -43,9 +47,8 @@
     <div class="row">
         <div class="col-12">
             <div class="task-input">
-                <input type="text" class="" placeholder="Add task">
+                <input type="text" class="add-task" placeholder="Add task">
             </div>
-
         </div>
     </div>
     <!-- ---------- task input end ------------ -->

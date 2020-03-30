@@ -8,6 +8,13 @@
 <script src="<?php echo url_for('/js/main.js') ?>"></script>
 <script src="<?php echo url_for('/js/signup_validate.js') ?>"></script>
 <script src="<?php echo url_for('/js/signin_validate.js') ?>"></script>
+<?php if ($session->is_signed_in()) : ?>
+    <script src="<?php echo url_for('/js/add_task_signin.js') ?>"></script>
+<?php endif; ?>
+
+<?php if (!$session->is_signed_in()) : ?>
+    <script src="<?php echo url_for('/js/add_task.js') ?>"></script>
+<?php endif; ?>
 
 </body>
 
