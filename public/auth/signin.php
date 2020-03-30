@@ -1,4 +1,4 @@
-<?php include_once('../private/initialize.php'); ?>
+<?php include_once('../../private/initialize.php'); ?>
 
 <?php
 if ($session->is_signed_in()) {
@@ -31,7 +31,7 @@ if (is_post_request()) {
     <div class="row">
         <div class="col-lg-6 col-md-8 col-sm-9 col-xs-11 mx-auto mt-5">
             <i class="fas fa-user-circle user-icon"></i>
-            <form action="<?php echo url_for('/signin.php'); ?>" method="POST">
+            <form action="<?php echo url_for('auth/signin.php'); ?>" method="POST">
                 <div class="form-group">
                     <small class="text-danger form-text mb-2" id="signin-username-error"><?php echo $error ?? '' ?></small>
                     <input type="text" value="<?php echo $username ?? ''; ?>" id="signin-username" name="user[username]" class="form-control" placeholder="Username">

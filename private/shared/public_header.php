@@ -53,15 +53,15 @@
                                     <?php echo $session->get_username(); ?>
                                 </a>
                                 <div class="bg-light dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="<?php echo url_for('/signout.php'); ?>">Sign Out</a>
+                                    <a class="dropdown-item" href="<?php echo url_for('auth/signout.php'); ?>">Sign Out</a>
                                 </div>
                             </li>
                         <?php else :  ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo url_for('/signin.php'); ?>">Sign In</a>
+                                <a class="nav-link" href="<?php echo url_for('auth/signin.php'); ?>">Sign In</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo url_for('/signup.php'); ?>">Sign Up</a>
+                                <a class="nav-link" href="<?php echo url_for('auth/signup.php'); ?>">Sign Up</a>
                             </li>
                         <?php endif; ?>
                     </ul>
