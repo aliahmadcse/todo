@@ -19,7 +19,7 @@ if (is_post_request()) {
     $result = $user->find_by_username($username);
     // result is another user object contains matched database row
     if ($result && $result->verify_password($password)) {
-        $session->set_signin($result->get_id(), $result->get_username());
+        $session->set_signin($result);
         redirect_to(url_for('/index.php'));
     } else {
         $error = "Doesn't seems like correct username or password";
