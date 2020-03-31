@@ -39,7 +39,8 @@ class Task extends DatabaseObject
     {
         $sql = "SELECT * FROM " . static::$table_name . " ";
         $sql .= "WHERE user_id=" . self::$database->escape_string($user_id) . " ";
-        $sql .= "AND is_completed=0 AND is_important=0" . " ";
+        $sql .= "AND is_completed=0" . " ";
+        $sql .= "AND is_important=0" . " ";
         $sql .= "ORDER BY dated DESC";
         return static::find_by_sql($sql);
     }
