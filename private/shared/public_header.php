@@ -29,8 +29,8 @@
             <div class="list-group list-group-flush">
                 <a href="<?php echo url_for('/index.php'); ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-sun"></i>&nbsp;My Day</a>
                 <?php if ($is_signed_in) : ?>
-                    <a href="#" class="list-group-item list-group-item-action bg-light"><i class="far fa-star"></i>&nbsp;Important</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light"><i class="far fa-list-alt"></i>&nbsp;Completed</a>
+                    <a href="<?php echo url_for('/important.php'); ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-star"></i>&nbsp;Important</a>
+                    <a href="<?php echo url_for('/completed.php'); ?>" class="list-group-item list-group-item-action bg-light"><i class="far fa-list-alt"></i>&nbsp;Completed</a>
                 <?php endif; ?>
             </div>
         </div>

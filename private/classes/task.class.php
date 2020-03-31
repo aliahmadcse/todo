@@ -50,6 +50,26 @@ class Task extends DatabaseObject
         return static::find_by_sql($sql);
     }
 
+    public static function find_imp_by_user_id($user_id)
+    {
+        $sql = "SELECT * FROM " . static::$table_name . " ";
+        $sql .= "WHERE user_id=" . self::$database->escape_string($user_id) . " ";
+        $sql .= "AND is_completed=0" . " ";
+        $sql .= "AND is_important=1" . " ";
+        $sql .= "ORDER BY dated DESC";
+        return static::find_by_sql($sql);
+    }
+
+    public static function find_completed_by_user_id($user_id)
+    {
+        $sql = "SELECT * FROM " . static::$table_name . " ";
+        $sql .= "WHERE user_id=" . self::$database->escape_string($user_id) . " ";
+        $sql .= "AND is_completed=1" . " ";
+        $sql .= "AND is_important=0" . " ";
+        $sql .= "ORDER BY dated DESC";
+        return static::find_by_sql($sql);
+    }
+
     public static function mark_complete($task_id)
     {
         $sql = "UPDATE " . static::$table_name . " ";
