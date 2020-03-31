@@ -55,6 +55,12 @@ class DatabaseObject
         return $obj_array;
     }
 
+    public static function find_all()
+    {
+        $sql = "SELECT * FROM " . static::$table_name;
+        return static::find_by_sql($sql);
+    }
+
     protected static function instantiate($record)
     {
         $object = new static;

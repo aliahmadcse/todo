@@ -3,13 +3,14 @@
 class User extends DatabaseObject
 {
     protected static $table_name = "users";
-    protected static $db_columns = ['id', 'username', 'email', 'hashed_password'];
+    protected static $db_columns = ['id', 'username', 'email', 'hashed_password', 'dated'];
 
     protected $id;
     protected $username;
     protected $email;
     protected $password;
     protected $hashed_password;
+    protected $dated;
 
     public function __construct($args = [])
     {
@@ -18,6 +19,11 @@ class User extends DatabaseObject
                 $this->$key = $value;
             }
         }
+    }
+
+    function get_dated()
+    {
+        return $this->dated ?? '';
     }
 
     public function get_id()

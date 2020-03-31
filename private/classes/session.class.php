@@ -41,6 +41,11 @@ class Session
         return $_SESSION['username'];
     }
 
+    public function get_user_id()
+    {
+        return $_SESSION['id'];
+    }
+
     public function signout()
     {
         unset($_SESSION['id']);

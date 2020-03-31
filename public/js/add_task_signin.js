@@ -3,11 +3,13 @@ $(document).ready(function() {
   // sending request on ender key press event
   $(".add-task").keypress(function(e) {
     if (e.keyCode == 13) {
-      sendRequest();
+      const task = $(".add-task").val();
+      sendRequest(task);
+      $(".add-task").val("");
     }
   });
 
-  const sendRequest = () => {
+  const sendRequest = task => {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/add_task.php");
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -18,7 +20,7 @@ $(document).ready(function() {
         console.log(result);
       }
     };
-    xhr.send("id=" + "1");
+    xhr.send("task=" + task);
   };
   //
 }); //end of jq doc ready event
