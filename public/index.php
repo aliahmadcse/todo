@@ -32,14 +32,18 @@
             <div class="col-12">
                 <div class="card mb-2">
                     <div class="task-description">
-                        <label class="container ml-5"><?php echo $obj->get_task_detail(); ?>
-                            <input type="checkbox">
-                            <span class="checkmark m-1"></span>
+                        <label class="container ml-5"><?php echo h($obj->get_task_detail()); ?>
+                            <?php if ($session->is_signed_in()) : ?>
+                                <input type="checkbox">
+                                <span class="checkmark m-1"></span>
+                            <?php endif; ?>
                         </label>
                     </div>
                     <div class="card-icon">
-                        <i class="mr-4 far fa-star"></i>
-                        <!-- <i class="mr-4 fas fa-star"></i> -->
+                        <?php if ($session->is_signed_in()) : ?>
+                            <i class="mr-4 far fa-star"></i>
+                            <!-- <i class="mr-4 fas fa-star"></i> -->
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

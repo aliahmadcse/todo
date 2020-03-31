@@ -38,12 +38,12 @@ class Session
 
     public function get_username()
     {
-        return $_SESSION['username'];
+        return $_SESSION['username'] ?? '';
     }
 
     public function get_user_id()
     {
-        return $_SESSION['id'];
+        return $_SESSION['id'] ?? '';
     }
 
     public function signout()

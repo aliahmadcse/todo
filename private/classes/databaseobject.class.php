@@ -32,7 +32,7 @@ class DatabaseObject
     {
         $attributes = [];
         foreach (static::$db_columns as $column) {
-            if ($column == 'id') {
+            if ($column == 'id' || $column == "dated") {
                 continue;
             } else {
                 // performing sanization to prevent sql injunction
