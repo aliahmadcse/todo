@@ -24,7 +24,7 @@ class Task extends DatabaseObject
     {
         return $this->id;
     }
-    
+
     public function get_task_detail()
     {
         return $this->task_detail;
@@ -48,5 +48,14 @@ class Task extends DatabaseObject
         $sql .= "AND is_important=0" . " ";
         $sql .= "ORDER BY dated DESC";
         return static::find_by_sql($sql);
+    }
+
+    public static function mark_complete($task_id)
+    {
+        $sql = "UPDATE " . static::$table_name . " ";
+        $sql .= "SET is_completed=1" . " ";
+        $sql .= "WHERE id=" . self::$database->escape_string($task_id) . " ";
+        $sql .= "LIMIT 1";
+        return self::$database->query($sql);
     }
 }
