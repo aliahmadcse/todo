@@ -10,6 +10,7 @@
 <script src="<?php echo url_for('/js/signin_validate.js') ?>"></script>
 <?php if ($session->is_signed_in()) : ?>
     <script src="<?php echo url_for('/js/add_task_signin.js') ?>"></script>
+    <script src="<?php echo url_for('/js/complete_task.js') ?>"></script>
 <?php endif; ?>
 
 <?php if (!$session->is_signed_in()) : ?>

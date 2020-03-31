@@ -20,6 +20,11 @@ class Task extends DatabaseObject
         }
     }
 
+    public function get_task_id()
+    {
+        return $this->id;
+    }
+    
     public function get_task_detail()
     {
         return $this->task_detail;

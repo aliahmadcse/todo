@@ -138,13 +138,16 @@ body {
 }
 
 .container {
-    cursor: pointer;
     font-size: 22px;
     font-family: var(--bellota-text);
 }
 
 .container input {
     display: none;
+}
+
+.mark-complete {
+    cursor: pointer;
 }
 
 .checkmark {
@@ -277,11 +280,11 @@ body {
 }
 
 .btn-submit-form:hover {
-    background: var(--primary-color2) ;
+    background: var(--primary-color2);
 }
 
-.btn-submit-form:focus{
-    background: var(--primary-color2) ;
+.btn-submit-form:focus {
+    background: var(--primary-color2);
 }
 
 @media only screen and (max-width:769px) {
