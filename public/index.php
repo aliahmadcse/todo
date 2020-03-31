@@ -40,11 +40,11 @@
                             <div class="task-description">
                                 <label class="container ml-5"><?php echo h($obj->get_task_detail()); ?>
                                     <input type="checkbox">
-                                    <span class="checkmark m-1 mark-complete" id="<?php echo h($obj->get_task_id()); ?>"></span>
+                                    <span class="checkmark m-1 mark-complete" id="complete-<?php echo h($obj->get_task_id()); ?>"></span>
                                 </label>
                             </div>
                             <div class="card-icon">
-                                <i class="mr-4 far fa-star"></i>
+                                <i class="mr-4 far fa-star" id="imp-<?php echo h($obj->get_task_id()); ?>"></i>
                                 <!-- <i class="mr-4 fas fa-star"></i> -->
                             </div>
                         </div>

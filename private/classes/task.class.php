@@ -58,4 +58,13 @@ class Task extends DatabaseObject
         $sql .= "LIMIT 1";
         return self::$database->query($sql);
     }
+
+    public static function mark_important($task_id)
+    {
+        $sql = "UPDATE " . static::$table_name . " ";
+        $sql .= "SET is_important=1" . " ";
+        $sql .= "WHERE id=" . self::$database->escape_string($task_id) . " ";
+        $sql .= "LIMIT 1";
+        return self::$database->query($sql);
+    }
 }

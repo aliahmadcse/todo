@@ -1,6 +1,6 @@
 $(document).ready(function() {
   //will trigger on checkbox click event
-  $(".mark-complete").click(function(e) {
+  $(".card-icon").click(function(e) {
     const idStr = e.target.id;
     const id = idStr.match(/\d+/)[0];
     sendRequest(id);
@@ -10,7 +10,7 @@ $(document).ready(function() {
 
   const sendRequest = id => {
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "ajax/complete_task.php");
+    xhr.open("POST", "ajax/important_task.php");
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
     xhr.onreadystatechange = () => {

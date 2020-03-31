@@ -130,7 +130,10 @@ body {
     justify-content: space-between;
     align-items: center;
     background: rgba(136, 132, 132, 0.133);
+}
 
+.card:hover {
+    background: rgba(22, 20, 20, 0.133);
 }
 
 .task-description {
@@ -160,9 +163,15 @@ body {
     background-color: rgb(255, 254, 254);
 }
 
-.container input:checked~.checkmark {
-    background-color: var(--rebeccapurple);
+.checkmark:hover {
+    transform: scale(1.1, 1.1);
 }
+
+
+
+/* .container input:checked~.checkmark {
+    background-color: var(--rebeccapurple);
+} */
 
 .checkmark:after {
     content: "";
@@ -190,6 +199,14 @@ body {
     .task-description {
         width: 80%;
     }
+}
+
+.card-icon {
+    cursor: pointer;
+}
+
+.card-icon:hover {
+    transform: scale(1.1, 1.1);
 }
 
 /* ------------task card end -------------*/
