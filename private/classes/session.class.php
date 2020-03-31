@@ -5,7 +5,7 @@ class Session
     private $id;
     private $username;
     private $last_signin;
-    private const MAX_LOGIN_AGE = 10; //1 day
+    private const MAX_LOGIN_AGE = 60 * 60; //1 hour
 
 
     public function __construct()
