@@ -43,7 +43,7 @@ $(document).ready(function() {
       </div>
     </div>`;
 
-    return str;
+    return str.replace(/(\r\n|\n|\r)/gm,"");
   };
   //
 }); //end of jq doc ready event
