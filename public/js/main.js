@@ -11,19 +11,17 @@ $(document).ready(function() {
 
   // searching through dom
   $(".search-term").on("keyup", function() {
-    var value = $(this)
+    let searchStr = $(this)
       .val()
       .toLowerCase();
-    $("$signin-task-container").append();
-    $("#signin-task-container").filter(function() {
-      $(this).toggle(
-        $(this)
-          .text()
-          .toLowerCase()
-          .indexOf(value) > -1
-      );
+    $("#signin-task-container .task-row label").each(function() {
+      let labelStr = $(this)
+        .text()
+        .toLowerCase();
+      $(this)
+        .closest(".task-row")
+        [labelStr.indexOf(searchStr) !== -1 ? "show" : "hide"]();
     });
   });
-
   // end of document ready function
 });

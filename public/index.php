@@ -41,16 +41,7 @@
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-    <!-- ---------task card for sign in user------------ -->
-
-
-    <!-- --------task card for guest user---------- -->
-    <?php if (!$session->is_signed_in()) : ?>
-        <div id="guest-task-container">
-        </div>
-    <?php endif; ?>
-    <!-- -------task card for guest user end------- -->
-
+    <!-- ---------task card end------------ -->
 
     <!-- ---------- task input ------------ -->
     <div class="row">

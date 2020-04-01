@@ -4,7 +4,7 @@ $(document).ready(function() {
     const task = $(".add-task").val();
     if (e.keyCode == 13 && task.length > 0) {
       const taskStr = `
-      <div class="row">
+      <div class="row task-row">
         <div class="col-12">
             <div class="card mb-2">
                 <div class="task-description">
@@ -14,7 +14,7 @@ $(document).ready(function() {
         </div>
       </div>`;
 
-      $("#guest-task-container").prepend(taskStr);
+      $("#signin-task-container").prepend(taskStr);
       $(".add-task").val("");
     }
   });
