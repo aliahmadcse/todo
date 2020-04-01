@@ -31,7 +31,7 @@
                                 </label>
                             </div>
                             <div class="card-icon-delete">
-                                <i class="mr-4 far fa-trash-alt"></i>
+                                <i class="mr-4 text-danger far fa-trash-alt" id="delete-<?php echo h($obj->get_task_id()); ?>"></i>
                             </div>
                         </div>
                     </div>

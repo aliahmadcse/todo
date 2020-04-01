@@ -73,7 +73,7 @@ class Task extends DatabaseObject
     public static function mark_complete($task_id)
     {
         $sql = "UPDATE " . static::$table_name . " ";
-        $sql .= "SET is_completed=1" . " ";
+        $sql .= "SET is_completed=1,is_important=0" . " ";
         $sql .= "WHERE id=" . self::$database->escape_string($task_id) . " ";
         $sql .= "LIMIT 1";
         return self::$database->query($sql);
@@ -82,7 +82,7 @@ class Task extends DatabaseObject
     public static function mark_important($task_id)
     {
         $sql = "UPDATE " . static::$table_name . " ";
-        $sql .= "SET is_important=1" . " ";
+        $sql .= "SET is_important=1,is_completed=0" . " ";
         $sql .= "WHERE id=" . self::$database->escape_string($task_id) . " ";
         $sql .= "LIMIT 1";
         return self::$database->query($sql);

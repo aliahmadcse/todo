@@ -71,4 +71,11 @@ class DatabaseObject
         return $object;
     }
 
+    public function delete($id)
+    {
+        $sql = "DELETE FROM " . static::$table_name . " ";
+        $sql .= "WHERE id=" . self::$database->escape_string($id) . " ";
+        $sql .= "LIMIT 1";
+        return self::$database->query($sql);
+    }
 }

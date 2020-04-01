@@ -174,7 +174,6 @@ body {
 }
 
 
-
 /* .container input:checked~.checkmark {
     background-color: var(--rebeccapurple);
 } */
@@ -215,6 +214,17 @@ body {
     transform: scale(1.1, 1.1);
     color: var(--primary-color);
 }
+
+.card-icon-delete {
+    /* transition: var(--transition); */
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.card-icon-delete:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
 
 /* ------------task card end -------------*/
 
