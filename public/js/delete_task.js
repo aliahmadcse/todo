@@ -1,27 +1,29 @@
 $(document).ready(function() {
   //will trigger on checkbox click event
   $(".card-icon-delete").click(function(e) {
-    bootbox.confirm({
-      title: "Confirm",
-      message: "Do you want to delete the task? This cannot be undone.",
-      buttons: {
-        cancel: {
-          label: '<i class="fa fa-times"></i> Cancel'
-        },
-        confirm: {
-          label: '<i class="fa fa-check"></i> Confirm'
-        }
-      },
-      callback: function(result) {
-        if (result) {
-          const idStr = e.target.id;
-          const id = idStr.match(/\d+/)[0];
-          sendRequest(id);
-          const parentEle = $(`#${idStr}`).closest(".task-row");
-          parentEle.remove();
-        }
-      }
-    });
+    const idStr = e.target.id;
+    const id = idStr.match(/\d+/)[0];
+    sendRequest(id);
+    const parentEle = $(`#${idStr}`).closest(".task-row");
+    parentEle.remove();
+
+    // bootbox.confirm({
+    //   title: "Confirm",
+    //   message: "Do you want to delete the task? This cannot be undone.",
+    //   buttons: {
+    //     cancel: {
+    //       label: '<i class="fa fa-times"></i> Cancel'
+    //     },
+    //     confirm: {
+    //       label: '<i class="fa fa-check"></i> Confirm'
+    //     }
+    //   },
+    //   callback: function(result) {
+    //     if (result) {
+    //       // console.log(result);
+    //     }
+    //   }
+    // });
   });
 
   const sendRequest = id => {

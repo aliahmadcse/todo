@@ -16,4 +16,4 @@ $task = new Task($args);
 
 $result = $task->create();
 
-echo $result;
+echo $task->get_task_id();

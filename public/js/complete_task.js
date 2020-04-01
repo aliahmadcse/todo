@@ -2,6 +2,8 @@ $(document).ready(function() {
   //will trigger on checkbox click event
   $(".mark-complete").click(function(e) {
     const idStr = e.target.id;
+    console.log(idStr);
+    // return;
     const id = idStr.match(/\d+/)[0];
     sendRequest(id);
     const parentEle = $(`#${idStr}`).closest(".task-row");

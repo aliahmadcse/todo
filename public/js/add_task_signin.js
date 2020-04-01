@@ -15,9 +15,9 @@ $(document).ready(function() {
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
     xhr.onreadystatechange = () => {
       if (xhr.readyState == 4 && xhr.status == 200) {
-        let result = xhr.responseText;
-        if (result) {
-          $("#signin-task-container").prepend(taskStr(task));
+        let insertId = xhr.responseText;
+        if (insertId > 0) {
+          $("#signin-task-container").prepend(taskStr(task, insertId));
           $(".add-task").val("");
         }
       }
@@ -25,19 +25,19 @@ $(document).ready(function() {
     xhr.send("task=" + task);
   };
 
-  const taskStr = task => {
+  const taskStr = (task, insertId) => {
     const str = `
-    <div class="row">
+    <div class="row task-row" id="row-${insertId}">
       <div class="col-12">
         <div class="card mb-2">
           <div class="task-description">
             <label class="container ml-5">${task}
               <input type="checkbox">
-              <span class="checkmark m-1"></span>
+                <span class="checkmark m-1 mark-complete" id="complete-${insertId}"></span>
             </label>
           </div>
           <div class="card-icon">
-            <i class="mr-4 far fa-star"></i>
+            <i class="mr-4 far fa-star" id="imp-${insertId}"></i>
           </div>
         </div>
       </div>
