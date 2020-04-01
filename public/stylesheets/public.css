@@ -52,7 +52,9 @@ body {
     cursor: pointer;
 }
 
-
+.active-link {
+    color: var(--primary-color) !important;
+}
 
 @media (min-width: 768px) {
     #sidebar-wrapper {
@@ -130,10 +132,13 @@ body {
     justify-content: space-between;
     align-items: center;
     background: rgba(136, 132, 132, 0.133);
+    box-shadow: var(--box-shadow2);
+    transition: var(--transition);
 }
 
 .card:hover {
     background: rgba(22, 20, 20, 0.133);
+    box-shadow: var(--box-shadow3);
 }
 
 .task-description {
@@ -165,6 +170,7 @@ body {
 
 .checkmark:hover {
     transform: scale(1.1, 1.1);
+    border: 3px solid var(--primary-color);
 }
 
 
@@ -207,6 +213,7 @@ body {
 
 .card-icon:hover {
     transform: scale(1.1, 1.1);
+    color: var(--primary-color);
 }
 
 /* ------------task card end -------------*/
