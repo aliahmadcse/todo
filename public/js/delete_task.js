@@ -2,11 +2,13 @@ $(document).ready(function() {
   //will trigger on checkbox click event
   $(".card-icon-delete").click(function(e) {
     const idStr = e.target.id;
-    const id = idStr.match(/\d+/)[0];
-    sendRequest(id);
-    const parentEle = $(`#${idStr}`).closest(".task-row");
-    parentEle.remove();
-
+    console.log(idStr);
+    if (idStr) {
+      const id = idStr.match(/\d+/)[0];
+      sendRequest(id);
+      const parentEle = $(`#${idStr}`).closest(".task-row");
+      parentEle.remove();
+    }
     // bootbox.confirm({
     //   title: "Confirm",
     //   message: "Do you want to delete the task? This cannot be undone.",
@@ -34,7 +36,7 @@ $(document).ready(function() {
     xhr.onreadystatechange = () => {
       if (xhr.readyState == 4 && xhr.status == 200) {
         let result = xhr.responseText;
-        console.log(result);
+        // console.log(result);
       }
     };
     xhr.send("id=" + id);
