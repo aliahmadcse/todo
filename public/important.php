@@ -31,7 +31,7 @@
                                 </label>
                             </div>
                             <div class="card-icon-imp">
-                                <i class="mr-4 fas fa-star"></i>
+                                <i class="mr-2 ml-2 fas fa-star"></i>
                             </div>
                         </div>
                     </div>

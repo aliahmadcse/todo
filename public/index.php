@@ -33,12 +33,13 @@
                                 </label>
                             </div>
                             <div class="card-icon">
-                                <i class="mr-4 far fa-star" id="imp-<?php echo h($obj->get_task_id()); ?>"></i>
+                                <i class="mr-2 ml-4 far fa-star" id="imp-<?php echo h($obj->get_task_id()); ?>"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             <?php endforeach; ?>
+            <div class="bottom-margin"></div>
         </div>
     <?php endif; ?>
     <!-- ---------task card end------------ -->

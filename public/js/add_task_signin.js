@@ -37,7 +37,7 @@ $(document).ready(function() {
             </label>
           </div>
           <div class="card-icon">
-            <i class="mr-4 far fa-star" id="imp-${insertId}"></i>
+            <i class="mr-2 ml-4 far fa-star" id="imp-${insertId}"></i>
           </div>
         </div>
       </div>
