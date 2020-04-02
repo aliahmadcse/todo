@@ -14,7 +14,7 @@
 ✔ Clone the repo\
 ✔ Move the repo into your server's root folder\
 ✔ Import the **todo.sql** into mysql database\
-✔ Start your server and type `localhost/reponame/public` to open home page\
+✔ Start your server and type `localhost/repo-name/` to open home page\
 ✔ Write some code and open pull requeest
 
 ## Want to connect. Follow me on [Twitter](http://twitter.com/aliahmadcse) ![Twitter](https://img.icons8.com/officexs/15/000000/twitter.png)
