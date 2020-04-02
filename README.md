@@ -9,10 +9,10 @@
 - See your important tasks under **Important** section
 - See the completed todo's under the **completed** section
 
-## Want to contribute
+## Want to test in local server
 
-1. ✔ Clone the repo
-2. ✔ Move the repo into your server's root folder
-3. Import the **todo.sql** into mysql database
-4. ✔ Start your server and type **localhost/reponame/public** to open home page
-5. Write some code and open pull requeest
+✔ Clone the repo\
+✔ Move the repo into your server's root folder\
+✔ Import the **todo.sql** into mysql database\
+✔ Start your server and type `localhost/reponame/public` to open home page\
+✔ Write some code and open pull requeest
