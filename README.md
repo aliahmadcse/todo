@@ -16,3 +16,8 @@
 ✔ Import the **todo.sql** into mysql database\
 ✔ Start your server and type `localhost/reponame/public` to open home page\
 ✔ Write some code and open pull requeest
+
+
+<p align="center">Made by
+<a href='http://twitter.com/aliahmadcse'>Ali Ahmad</a>
+</p>
