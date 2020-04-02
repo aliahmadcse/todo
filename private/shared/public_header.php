@@ -47,6 +47,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://twitter.com/aliahmadcse"><i class="fab fa-twitter"></i></a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://github.com/aliahmadcse/todo"><i class="fab fa-github icon-github"></i></a>
+                        </li>
                         <?php if ($is_signed_in) : ?>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

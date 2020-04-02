@@ -33,6 +33,7 @@ require_once('db_functions.php');
 // Autoload class definitions
 function my_autoload($class)
 {
+    $class = strtolower($class);
     if (preg_match('/^\w+$/', $class)) {
         include "classes/" . $class . ".class.php";
     }

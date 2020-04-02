@@ -56,6 +56,11 @@ body {
     color: var(--primary-color) !important;
 }
 
+.icon-github{
+    font-size: 25px;
+    margin-right: 20px;
+}
+
 @media (min-width: 768px) {
     #sidebar-wrapper {
         margin-left: 0;
