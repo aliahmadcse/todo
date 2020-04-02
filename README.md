@@ -1,5 +1,5 @@
-# ![alt text](https://img.icons8.com/nolan/64/todo-list.png)
+# Todo-App ![Todo-icon](https://img.icons8.com/nolan/26/todo-list.png)
 
-## Todo-App
+![Todo-home](public/images/index.png)
 
-![alt text](public/images/index.png)
+![Todo-icon](https://img.icons8.com/nolan/26/todo-list.png) First
